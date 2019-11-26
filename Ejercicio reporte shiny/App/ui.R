@@ -2,32 +2,38 @@ library(shiny)
 library(shinydashboard)
 
 ui <- dashboardPage(
-
-# Header ------------------------------------------------------------------
-
+  
+  # Header ------------------------------------------------------------------
+  
   dashboardHeader(title = "Reporte vuelos NY"
-                  ),
-## FIN HEADER
-
-
-# Sidebar -----------------------------------------------------------------
-
+  ),
+  ## FIN HEADER
+  
+  
+  # Sidebar -----------------------------------------------------------------
+  
   dashboardSidebar(
     ## Incluya un selector de texto de tipo *selectInput* que muestre las opciones de aeropuerto de destino
+    selectInput(inputId = "destino",
+                label = "Seleccione aeropuerto de destino",
+                choices = c("ALL",unique(vuelos$dest)))
+    
+    
   ),
-## FIN SIDEBAR
-
-
-# Body --------------------------------------------------------------------
-
+  ## FIN SIDEBAR
+  
+  
+  # Body --------------------------------------------------------------------
+  
   dashboardBody(
     # las cajas (box) deben declararse dentro de filas ()
     fluidRow(
-      ## Dentro de esta fila incluya dos cajas de tipo *infoBox*,
-      # Que muestren el retraso promedio de salida y retraso promedio de llegada.
+      infoBoxOutput("arr_delay_prom"),
+      infoBoxOutput("dep_delay_prom")
+      
     )
   )
-## FIN BODY
+  ## FIN BODY
 )
 
 

@@ -4,11 +4,11 @@ library(tidyverse)
 library(highcharter)
 
 
-vuelos      <- read.csv("flights/flights.csv", stringsAsFactors = F)
-aeropuertos <- read.csv("flights/airports.csv", stringsAsFactors = F)
-aerolineas  <- read.csv("flights/airlines.csv", stringsAsFactors = F)
-aviones     <- read.csv("flights/planes.csv", stringsAsFactors = F)
-clima       <- read.csv("flights/weather.csv", stringsAsFactors = F)
+vuelos      <- read.csv("../Vuelos/flights.csv", stringsAsFactors = F)
+aeropuertos <- read.csv("../Vuelos/airports.csv", stringsAsFactors = F)
+aerolineas  <- read.csv("../Vuelos/airlines.csv", stringsAsFactors = F)
+aviones     <- read.csv("../Vuelos/planes.csv", stringsAsFactors = F)
+clima       <- read.csv("../Vuelos/weather.csv", stringsAsFactors = F)
 
 
 
