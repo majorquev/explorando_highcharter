@@ -1,0 +1,12 @@
+name: primera_app
+title: primera_app
+username:
+account: majorquev
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 1512726
+bundleId: 2609985
+url: https://majorquev.shinyapps.io/primera_app/
+when: 1574437150.80037
+asMultiple: FALSE
+asStatic: FALSE
